@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity2">
+   <com.google.android.exoplayer2.ui.PlayerView
+       android:layout_width="match_parent"
+       android:id="@+id/exoplayer2"
+       android:layout_height="match_parent"
+       app:player_layout_id="@layout/exo_palyer_view"
+       app:surface_type="surface_view"
+       app:controller_layout_id="@layout/custom_controls"
+       app:resize_mode="fit"
+       app:hide_on_touch="true"
+       app:show_buffering="always"
+       app:use_controller="true"
+       app:show_timeout="4000"
+       android:keepScreenOn="true"
+       android:background="@color/black"
+       app:shutter_background_color="@color/black"
+
+       />
+
+</RelativeLayout>

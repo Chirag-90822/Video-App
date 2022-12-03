@@ -1,0 +1,62 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.First" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/black</item>
+        <item name="navigationIconTint">@color/black</item>
+       <item name="android:navigationBarColor" tools:targetApi="l">@color/black</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">@color/white</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_baseline_another_arrow</item>
+
+
+
+    </style>
+
+    <style name="CustomDialog" parent="Theme.AppCompat.Dialog">
+<item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+       <item name="android:windowBackground">@color/light_black</item>
+        <item name="colorControlHighlight">@color/transparent</item>
+
+
+
+    </style>
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/bright</item>
+    </style>
+    <style name="MaterialAlertDialog.App.Title.Text" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/bright</item>
+    </style>
+
+    <style name="SomeButtonTheme" >
+        <item name="colorControlHighlight">@color/bright</item>
+    </style>
+
+
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="ToolbarColoredBackArrow" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+    <style name="bottomsheetdialog" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomsheetstyle</item>
+    </style>
+    <style name="bottomsheetstyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/transparent</item>
+        <item name="behavior_peekHeight">512dp</item>
+    </style>
+</resources>

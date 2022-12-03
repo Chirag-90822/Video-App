@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VideoPlay">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:layout_width="match_parent"
+        android:id="@+id/exoplayer"
+        android:layout_height="match_parent"
+        app:player_layout_id="@layout/exo_palyer_view"
+        app:surface_type="surface_view"
+        app:controller_layout_id="@layout/custom_controls"
+        app:resize_mode="fit"
+        app:hide_on_touch="true"
+        app:show_buffering="always"
+        app:use_controller="true"
+        app:show_timeout="4000"
+        android:keepScreenOn="true"
+        android:background="@color/black"
+        app:shutter_background_color="@color/black"
+
+    />
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_marginRight="2dp"
+        android:background="@color/light_black"
+        android:id="@+id/brightness_slider_container"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="17"
+           android:layout_gravity="center_vertical|center"
+           android:textColor="@color/white"
+           android:id="@+id/brighttext"
+           android:textSize="17sp"/>
+
+        <FrameLayout
+            android:layout_width="32dp"
+            android:layout_height="150dp"
+
+            android:layout_gravity="center_vertical|center"
+            android:orientation="vertical">
+
+            <SeekBar
+
+                android:id="@+id/brightness_slider"
+                android:layout_width="150dp"
+                android:layout_height="32dp"
+                android:max="15"
+                android:progress="0"
+                android:layout_gravity="center"
+                android:progressDrawable="@drawable/custom_seekbar_brightness"
+                android:rotation="270"
+                android:thumb="@android:color/transparent" />
+
+
+        </FrameLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+
+            android:src="@drawable/hplib_brightness_medium"
+            android:id="@+id/brightnessIcon" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/Volume_slider_container"
+        android:background="@color/light_black"
+        android:layout_marginLeft="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17"
+            android:id="@+id/volumetext"
+            android:layout_gravity="center_vertical|center"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+
+        <FrameLayout
+            android:layout_width="32dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_vertical|center"
+            android:orientation="vertical">
+
+            <SeekBar
+
+                android:id="@+id/Volume_slider"
+                android:layout_width="150dp"
+                android:layout_height="32dp"
+                android:max="15"
+                android:progress="0"
+                android:layout_gravity="center"
+                android:progressDrawable="@drawable/custom_seekbar_volume"
+                android:rotation="270"
+                android:thumb="@android:color/transparent" />
+
+
+        </FrameLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/hplib_volume"
+            android:id="@+id/VolumeIcon" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/seekbar_center_text"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:44"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:id="@+id/txt_seek_currTime"
+            android:textColor="#ffffff" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[ +00:10 ]"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:id="@+id/txt_seek_secs"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+</RelativeLayout>
